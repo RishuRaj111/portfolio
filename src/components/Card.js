@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, {  useRef } from 'react';
 import './Card.css';
 
 
@@ -44,7 +44,7 @@ const Card = ({ title, description, image,link }) => {
                 <p className='card-text'>{description}</p>
             </div>
             <div className="card-footer">
-                <a href={link} target='_blank' className="btn">Learn More</a>
+                <a href={link} target='_blank' rel='noreferrer' className="btn">Learn More</a>
             </div>
         </div>
     );
