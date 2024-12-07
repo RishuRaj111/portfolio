@@ -1,0 +1,81 @@
+.navbar {
+    background: linear-gradient(
+        70deg,
+        rgb(49, 71, 160) 0%,
+        rgb(25, 145, 28) 50%,
+        rgb(73, 63, 252) 100%
+    );
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+ 
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    
+  }
+  
+
+  @keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* .nav-title{
+    color: white;
+    mix-blend-mode: difference;
+} */
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+  
+  .navbar-logo {
+    color: #fff;
+    mix-blend-mode: difference;
+    justify-self: start;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .nav-item {
+    height: 80px;
+    padding: 0 1rem;
+  }
+  
+  .nav-link {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+  }
+  
+  .nav-link:hover {
+    color: #09bef0;
+    transition: all 0.2s ease-out;
+  }

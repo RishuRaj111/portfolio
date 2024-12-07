@@ -1,0 +1,83 @@
+/* Container for the form */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background:linear-gradient(90deg,#101030,#202010,#301010); /* Optional background image */
+    background-size: cover; /* Ensure the image covers the whole background */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Form Title */
+.contact-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff; /* White text for contrast */
+}
+
+/* Form styling */
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for a modern look */
+    max-width: 500px; /* Restrict the form width */
+    width: 100%; /* Responsive width */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Label styles */
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Input fields */
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+}
+
+/* Focus state for input and textarea */
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit button */
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 20px;
+        max-width: 90%;
+    }
+}

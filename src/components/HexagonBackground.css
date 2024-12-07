@@ -1,0 +1,45 @@
+.hexagon-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 120px); /* Adjust this size for how many hexagons fit */
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* Allow user interaction over hexagons */
+    z-index: -1; /* Keep it in the background */
+}
+
+.hexagon {
+    width: 100px;
+    height: 57.74px;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark hexagons */
+    position: relative;
+    display: inline-block;
+    transform: rotate(30deg);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hexagon::before,
+.hexagon::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 57.74px;
+    background-color: inherit;
+    transform: rotate(60deg);
+    top: -28.87px;
+    left: 0;
+}
+
+.hexagon::after {
+    top: auto;
+    bottom: -28.87px;
+}
+
+.hexagon:hover {
+    background-color: #ffeb3b; /* Yellow light effect */
+}

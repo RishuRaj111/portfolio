@@ -1,0 +1,15 @@
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Or use center or flex-start depending on alignment */
+    gap: 20px; /* Space between the cards */
+    padding: 100px;
+}
+
+.project .card {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust for three cards per row */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    box-shadow: .1,.1,2,#152510;
+}
+

@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useRef } from 'react';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Contact from './components/Contact';
+import About from './components/About';
 
 function App() {
+  const projectSectionRef = useRef(null); // Ref for the project section
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar projectSectionRef={projectSectionRef} /> {/* Pass the ref to Navbar */}
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Home ref={projectSectionRef} />} /> {/* Pass the ref to Home */}
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
